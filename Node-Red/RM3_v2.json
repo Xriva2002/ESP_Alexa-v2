@@ -1,0 +1,438 @@
+[
+    {
+        "id": "62a028c2.1a2238",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3f4870a8.874af",
+        "type": "mqtt in",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "topic": "ESP_ALEXA/#",
+        "qos": "2",
+        "broker": "bf6c3b9d.1c18a8",
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "2501be52.e20922"
+            ]
+        ]
+    },
+    {
+        "id": "e0f0e47d.bb5c08",
+        "type": "debug",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 690,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ac93f087.0bd6c",
+        "type": "mqtt out",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "b4c5daa5.aed398",
+        "x": 690,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a6a45f2a.b2915",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "PullConfig",
+        "topic": "PullConfig",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "2320ecc6.dc8e24",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "topic": "Alpha/Set",
+        "payload": "0",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "da7f76cc.2535c8",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "topic": "Alpha/Get",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "d2ef0805.b66aa8",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "topic": "Alpha/Set",
+        "payload": "255",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "449de96a.745ff8",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "Mem",
+        "topic": "Mem",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 540,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "69ea0533.1d3bdc",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "PushConfig",
+        "topic": "PushConfig",
+        "payload": "{ \t\"devname\": \"ESP_Alexa\", \t\"devices\": [ \t\t{ \t\t\t\"name\": \"Television\", \t\t\t\"on\": \"7,0xE0E09966,32,3\", \t\t\t\"off\": \"7,0xE0E019E6,32,3\" \t\t}, \t\t{ \t\t\t\"name\": \"Mute\", \t\t\t\"on\": \"7,0xE0E0F00F,32,1\", \t\t\t\"off\": \"7,0xE0E0F00F,32,1\" \t\t}, \t\t{ \t\t\t\"name\": \"Freeview\", \t\t\t\"on\": \"3,0xDF0800FF,32,3\", \t\t\t\"off\": \"3,0xDF0800FF,32,3\" \t\t}, \t\t{ \t\t\t\"name\": \"Satellite\", \t\t\t\"on\": \"3,0x5F0830CF,32,3\", \t\t\t\"off\": \"3,0x5F0800FF,32,3\" \t\t}, \t\t{ \t\t\t\"name\": \"Abox\", \t\t\t\"on\": \"3,0x00FB38C7,32,3\", \t\t\t\"off\": \"3,0x00FB38C7,32,3\" \t\t} \t] }",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "7dbb1bf3.0d2904",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "topic": "Reset",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 480,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "2501be52.e20922",
+        "type": "function",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "func": "if(msg.payload == \"Connected\")\n{\n    node.status({fill:\"green\",shape:\"dot\",text:msg.topic});\n    flow.set(\"Topic\", msg.topic);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 120,
+        "wires": [
+            [
+                "4a5b75d5.36843c"
+            ]
+        ]
+    },
+    {
+        "id": "862267a6.3ecd38",
+        "type": "function",
+        "z": "62a028c2.1a2238",
+        "name": "Device",
+        "func": "msg.topic = flow.get(\"Topic\") + \"/\" + msg.topic\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 380,
+        "wires": [
+            [
+                "ac93f087.0bd6c"
+            ]
+        ]
+    },
+    {
+        "id": "4a5b75d5.36843c",
+        "type": "switch",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "/Pulled",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 120,
+        "wires": [
+            [
+                "d3eb8392.2d6f6"
+            ],
+            [
+                "e0f0e47d.bb5c08"
+            ]
+        ]
+    },
+    {
+        "id": "d3eb8392.2d6f6",
+        "type": "json",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 690,
+        "y": 100,
+        "wires": [
+            [
+                "8a9fd212.736c7"
+            ]
+        ]
+    },
+    {
+        "id": "8a9fd212.736c7",
+        "type": "debug",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 850,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8aa841ca.0f1ea",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "topic": "WipeSPIFFS",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 800,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "95bf2519.2771e8",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "PushConfig X",
+        "topic": "PushConfig",
+        "payload": "{ \t\"devname\": \"ESP_AlexaX\", \t\"devices\": [ \t\t{ \t\t\t\"name\": \"Alpha\", \t\t\t\"on\": \"7,0xE0E09966,32,3\", \t\t\t\"off\": \"7,0xE0E019E6,32,3\" \t\t}, \t\t{ \t\t\t\"name\": \"Bravo\", \t\t\t\"on\": \"7,0xE0E0F00F,32,1\", \t\t\t\"off\": \"7,0xE0E0F00F,32,1\" \t\t}, \t\t{ \t\t\t\"name\": \"Charlie\", \t\t\t\"on\": \"3,0xDF0800FF,32,3\", \t\t\t\"off\": \"3,0xDF0800FF,32,3\" \t\t}, \t\t{ \t\t\t\"name\": \"Delta\", \t\t\t\"on\": \"3,0x5F0830CF,32,3\", \t\t\t\"off\": \"3,0x5F0800FF,32,3\" \t\t}, \t\t{ \t\t\t\"name\": \"Exho\", \t\t\t\"on\": \"3,0x00FB38C7,32,3\", \t\t\t\"off\": \"3,0x00FB38C7,32,3\" \t\t} \t] }",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "ae71576.5c248a8",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "PullSettings",
+        "topic": "PullSettings",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 760,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "99f27c9.dbd128",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "topic": "Blast",
+        "payload": "3,5F0830CF,32,3",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 200,
+        "y": 600,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "1e72d308.33db0d",
+        "type": "inject",
+        "z": "62a028c2.1a2238",
+        "name": "",
+        "topic": "Blast",
+        "payload": "3,5F0800FF,32,5",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 200,
+        "y": 640,
+        "wires": [
+            [
+                "862267a6.3ecd38"
+            ]
+        ]
+    },
+    {
+        "id": "ee841edb.25a98",
+        "type": "comment",
+        "z": "62a028c2.1a2238",
+        "name": "DEBUG Only",
+        "info": "",
+        "x": 170,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "bf6c3b9d.1c18a8",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "b4c5daa5.aed398",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "192.168.1.101",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]

@@ -1,0 +1,30 @@
+{
+	"devname": "ESP_Alexa",
+	"devices": [
+		{
+			"name": "Television",
+			"on": "7,0xE0E09966,32,3",
+			"off": "7,0xE0E019E6,32,3"
+		},
+		{
+			"name": "Mute",
+			"on": "7,0xE0E0F00F,32,1",
+			"off": "7,0xE0E0F00F,32,1"
+		},
+		{
+			"name": "Freeview",
+			"on": "3,0xDF0800FF,32,3",
+			"off": "3,0xDF0800FF,32,3"
+		},
+		{
+			"name": "Satellite",
+			"on": "3,0x5F0830CF,32,3",
+			"off": "3,0x5F0800FF,32,3"
+		},
+		{
+			"name": "Abox",
+			"on": "3,0x00FB38C7,32,3",
+			"off": "3,0x00FB38C7,32,3"
+		}
+	]
+}
